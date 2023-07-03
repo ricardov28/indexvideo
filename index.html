@@ -9,7 +9,7 @@
         charset="utf-8"></script>
     <script>
         document.addEventListener("DOMContentLoaded", async function (event) {
-            const res = await fetch(`/api/negotiate?id=${1}`);
+            const res = await fetch(`https://fromeventtoweb.azurewebsites.net/api/negotiate?id=${1}`);
             const data = await res.json();
             const webSocket = new WebSocket(data.url);
             let lastMessageReceivedTime = Date.now();
